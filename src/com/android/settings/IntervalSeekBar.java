@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * Copyright (C) 2014-2015 The CyanogenMod Project
  *
@@ -14,6 +15,8 @@
  * limitations under the License.
  */
 
+=======
+>>>>>>> bdd3a01... Display Settings: Better font size control
 package com.android.settings;
 
 import android.content.Context;
