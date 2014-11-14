@@ -753,7 +753,7 @@ public final class BatteryService extends SystemService {
             // Does the Device support changing battery LED colors?
             mMultiColorLed = context.getResources().getBoolean(
                     com.android.internal.R.bool.config_multiColorBatteryLed);
-
+            mBatteryLedOn = context.getResources().getInteger( 
                     com.android.internal.R.integer.config_notificationsBatteryLedOn);
             mBatteryLedOff = context.getResources().getInteger(
                     com.android.internal.R.integer.config_notificationsBatteryLedOff);
@@ -901,7 +901,6 @@ public final class BatteryService extends SystemService {
             }
         }
     }
-}
 
     class SettingsObserver extends ContentObserver {
         SettingsObserver(Handler handler) {
