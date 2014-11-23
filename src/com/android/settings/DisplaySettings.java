@@ -197,7 +197,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             removePreference(KEY_CAMERA_DOUBLE_TAP_POWER_GESTURE);
         }
 
-        if (RotationPolicy.isRotationLockToggleVisible(activity)) {
+        if (RotationPolicy.isRotationSupported(activity)) {
             DropDownPreference rotatePreference =
                     (DropDownPreference) findPreference(KEY_AUTO_ROTATE);
             rotatePreference.addItem(activity.getString(R.string.display_auto_rotate_rotate),
