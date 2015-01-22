@@ -147,4 +147,9 @@
     <string name="io_changelog_title">ChangeLog</string>
     <string name="io_changelog_summary">InfinitiveOS ChangeLog</string>
     <string name="io_changelog_error">ChangeLog could not be loaded!</string>
+
+    <!-- Devices and Maintainers -->
+    <string name="device_maintainers_title">Devices and Maintainers</string>
+    <string name="device_maintainers_title_summary">List of devices and their Infinitive OS ROM maintainers</string>
+
 </resources>

@@ -56,6 +56,12 @@
                     android:summary="@string/io_changelog_summary"
                     android:fragment="com.android.settings.io.ChangeLog" />
 
+        <!-- Devices and Maintainers -->
+        <PreferenceScreen
+                android:key="infinitive_devices"
+                android:title="@string/device_maintainers_title"
+                android:fragment="com.android.settings.io.Devices" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
