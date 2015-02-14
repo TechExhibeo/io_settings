@@ -362,6 +362,14 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
             Settings.System.putInt(getContentResolver(),
                 Settings.System.RECENTS_CLEAR_ALL_LOCATION, 3);
             summary = R.string.recents_clear_all_location_bottom_left;
+        } else if (value == 4) {
+            Settings.System.putInt(getContentResolver(),
+                Settings.System.RECENTS_CLEAR_ALL_LOCATION, 4);
+            summary = R.string.recents_clear_all_location_top_center;
+        } else if (value == 5) {
+            Settings.System.putInt(getContentResolver(),
+                Settings.System.RECENTS_CLEAR_ALL_LOCATION, 5);
+            summary = R.string.recents_clear_all_location_bottom_center;
         }
         if (mRecentsClearAllLocation != null && summary != -1) {
             mRecentsClearAllLocation.setSummary(getResources().getString(summary));
