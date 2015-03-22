@@ -21,10 +21,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.android.settings.slim.QsSettings
-import com.android.settings.slim.StatusBarClockStyle
-import com.android.settings.slim.StatusBar
+import com.android.settings.slim.StatusBarClockStyle;
+import com.android.settings.slim.StatusBar;
 import com.android.settings.io.NavigationBarSettings;
+import com.android.settings.slim.QsSettings;
+import com.android.settings.io.PowerMenuActions;
 import com.android.settings.io.About;
 
 import com.android.settings.R;
@@ -85,7 +86,8 @@ public class IOSettings extends SettingsPreferenceFragment {
             frags[1] = new NavigationBarSettings();
             frags[2] = new QsSettings();
             frags[3] = new RecentsPanel();
-            frags[4] = new About();
+            frags[4] = new PowerMenuActions();
+            frags[5] = new About();
         }
 
         @Override
@@ -111,6 +113,7 @@ public class IOSettings extends SettingsPreferenceFragment {
                     getString(R.string.navigation_bar_title),
                     getString(R.string.recent_panel_category),
                     getString(R.string.title_qs_tiles),
+                    getString(R.string.power_menu_title),
                     getString(R.string.about_io)};
         return titleString;
     }
