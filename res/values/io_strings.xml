@@ -180,4 +180,12 @@
     <!-- Double tap-to-sleep -->
     <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
     <string name="double_tap_to_sleep_summary">Double-tap on the status bar or top third and bottom shortcut area of the lock screen to turn off the display</string>
+    
+    <!--Status bar carrier -->
+    <string name="show_carrier_title">Carrier label</string>
+    <string name="show_carrier_disabled">Disabled</string>
+    <string name="show_carrier_keyguard">Keyguard carrier</string>
+    <string name="show_carrier_statusbar">Status bar carrier</string>
+    <string name="show_carrier_enabled">Enabled</string>
+    
 </resources>
