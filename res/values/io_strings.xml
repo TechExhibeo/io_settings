@@ -133,4 +133,8 @@
     <string name="notification_volume_option_title">Notification volume</string>
     <string name="ring_notification_volume_option_tile">Ring and notification volume</string>
 
+    <!-- Appops -->
+    <string name="appops_manager_title">Appops</string>
+    <string name="appops_manager_summary">Individually manage all apps permissions</string>
+
 </resources>
