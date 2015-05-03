@@ -36,4 +36,19 @@
     <string name="navigation_bar_height_20">20dp</string>
     <string name="navigation_bar_height_0">0dp (hide)</string>
 
+    <!-- Infinitive World -->
+    <string name="io_settings_title">Infinitive World</string>
+    <string name="keywords_io">io</string>
+
+    <!-- About InfinitiveOS -->
+    <string name="about_io">About InfinitiveOS</string>
+    <string name="io_website_title">InfinitiveOS Website</string>
+    <string name="io_website_summary">Visit our website</string>
+    <string name="io_source_title">InfinitiveOS Github</string>
+    <string name="io_source_summary">Visit our Sources</string>
+    <string name="io_gerrit_title">InfinitiveOS Gerrit Code Review</string>
+    <string name="io_gerrit_summary">Visit our Gerrit Code Review</string>
+    <string name="io_google_plus_title">Google+ Community</string>
+    <string name="io_google_plus_summary">Visit our G+ Community for support and latest news</string>
+
 </resources>

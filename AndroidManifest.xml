@@ -1885,6 +1885,12 @@
                        android:resource="@id/security_settings" />
         </activity-alias>
 
+ 	<!-- InfinitiveOS Control Start -->
+
+        <activity android:name=".io.IOSettings" />
+
+        <!-- InfinitiveOS Control End -->
+
         <!-- Pseudo-activity used to provide an intent-filter entry point to encryption settings -->
         <activity android:name="Settings$CryptKeeperSettingsActivity"
                 android:label="@string/crypt_keeper_encrypt_title">

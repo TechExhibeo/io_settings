@@ -137,9 +137,4 @@
 
         </PreferenceCategory>
 
-	<PreferenceScreen
-	        android:key="navigation_bar"
-	        android:fragment="com.android.settings.io.NavigationBarSettings"
-	        android:title="@string/navigation_bar_title" />
 </PreferenceScreen>
-

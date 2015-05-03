@@ -98,6 +98,14 @@
             android:id="@+id/device_section"
             android:title="@string/header_category_device" >
 
+	<!-- Infinitive World -->
+        <dashboard-tile
+                android:id="@+id/io_settings"
+                android:title="@string/io_settings_title"
+                android:fragment="com.android.settings.io.IOSettings"
+                android:icon="@drawable/ic_io_settings"
+                />
+
         <!-- Home -->
         <dashboard-tile
                 android:id="@+id/home_settings"
