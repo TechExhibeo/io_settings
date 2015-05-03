@@ -357,4 +357,11 @@
     <style name="SetupWizardStorageStyle" parent="@style/SuwThemeMaterial.Light">
         <item name="android:colorAccent">#ff009688</item>
     </style>
+
+    <style name="TextAppearance.PagerTabsSystemSettings" parent="@android:style/TextAppearance.DeviceDefault.Small">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>

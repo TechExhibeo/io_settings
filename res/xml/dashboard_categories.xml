@@ -101,6 +101,14 @@
                 android:icon="@drawable/ic_settings_home"
                 />
 
+	<!-- Infinitive World -->
+        <dashboard-tile
+                android:id="@+id/io_settings"
+                android:title="@string/io_settings_title"
+                android:fragment="com.android.settings.io.IOSettings"
+                android:icon="@drawable/ic_io_settings"
+                />
+
         <!-- Display -->
         <dashboard-tile
                 android:id="@+id/display_settings"
