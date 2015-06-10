@@ -61,7 +61,7 @@ public class About extends SettingsPreferenceFragment {
         } else if (preference == mGerritUrl) {
             launchUrl("http://gerrit.aogp-devs.com");
         } else if (preference == mGoogleUrl) {
-            launchUrl("");
+            launchUrl("https://plus.google.com/communities/106007367793741615251");
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
