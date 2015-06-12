@@ -42,6 +42,11 @@
             android:key="io_google_plus"
             android:title="@string/io_google_plus_title"
             android:summary="@string/io_google_plus_summary" />
+
+        <Preference
+            android:key="io_download"
+            android:title="@string/io_download_title"
+            android:summary="@string/io_download_summary" />
 			
     </PreferenceCategory>
 

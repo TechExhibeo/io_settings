@@ -38,6 +38,7 @@ public class About extends SettingsPreferenceFragment {
     Preference mSourceUrl;
     Preference mGerritUrl;
     Preference mGoogleUrl;
+    Preference mDownloadUrl;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,7 @@ public class About extends SettingsPreferenceFragment {
         mSourceUrl = findPreference("io_source");
         mGerritUrl = findPreference("io_gerrit");
         mGoogleUrl = findPreference("io_google_plus");
+        mDownloadUrl = findPreference("io_download");
 
     }
 
@@ -62,6 +64,8 @@ public class About extends SettingsPreferenceFragment {
             launchUrl("http://gerrit.aogp-devs.com");
         } else if (preference == mGoogleUrl) {
             launchUrl("https://plus.google.com/communities/106007367793741615251");
+        } else if (preference == mDownloadUrl) {
+            launchUrl("https://sourceforge.net/projects/infinitiveos/files/");
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
