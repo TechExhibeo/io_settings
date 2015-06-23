@@ -1888,6 +1888,7 @@
  	<!-- InfinitiveOS Control Start -->
 
         <activity android:name=".io.IOSettings" />
+	<activity android:name=".io.ChangeLog" />
 
         <!-- InfinitiveOS Control End -->
 

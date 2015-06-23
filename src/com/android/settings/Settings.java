@@ -34,6 +34,7 @@ public class Settings extends SettingsActivity {
     public static class VpnSettingsActivity extends SettingsActivity { /* empty */ }
     public static class DateTimeSettingsActivity extends SettingsActivity { /* empty */ }
     public static class StorageSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class ChangeLog extends SettingsActivity { /* empty */ }
     public static class WifiSettingsActivity extends SettingsActivity { /* empty */ }
     public static class WifiP2pSettingsActivity extends SettingsActivity { /* empty */ }
     public static class InputMethodAndLanguageSettingsActivity extends SettingsActivity { /* empty */ }

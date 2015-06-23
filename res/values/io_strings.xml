@@ -143,4 +143,8 @@
     <!-- Rescan storage -->
     <string name="storage_rescan_media">Rescan media for the storage volume</string>
 
+    <!--InfinitiveOS Changelog-->
+    <string name="io_changelog_title">ChangeLog</string>
+    <string name="io_changelog_summary">InfinitiveOS ChangeLog</string>
+    <string name="io_changelog_error">ChangeLog could not be loaded!</string>
 </resources>

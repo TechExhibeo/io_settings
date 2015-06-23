@@ -48,6 +48,14 @@
             android:title="@string/io_download_title"
             android:summary="@string/io_download_summary" />
 			
+        <!-- InfinitiveOS ChangeLog -->
+
+	    <PreferenceScreen 
+		    android:key="changelog_io"
+                    android:title="@string/io_changelog_title"
+                    android:summary="@string/io_changelog_summary"
+                    android:fragment="com.android.settings.io.ChangeLog" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
