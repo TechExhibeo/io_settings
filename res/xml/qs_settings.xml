@@ -18,7 +18,7 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <PreferenceCategory
-        android:title="@string/qs_tiles_title" />
+        android:title="@string/title_qs_tiles" />
 
         <PreferenceScreen
             android:key="qs_order"

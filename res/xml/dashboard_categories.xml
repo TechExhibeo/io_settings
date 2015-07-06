@@ -75,20 +75,12 @@
             android:id="@+id/personalization_section"
             android:title="@string/header_category_personalization" >
 
-        <!-- Interface -->
+        <!-- Infinitive World -->
         <dashboard-tile
-                android:id="@+id/interface_settings"
-                android:icon="@drawable/ic_settings_interface"
-                android:fragment="com.android.settings.slim.InterfaceSettings"
-                android:title="@string/interface_settings_title"
-                />
-
-        <!-- Navigation -->
-        <dashboard-tile
-                android:id="@+id/navigation_settings"
-                android:icon="@drawable/ic_settings_navigation"
-                android:fragment="com.android.settings.slim.NavigationSettings"
-                android:title="@string/navigation_settings_title"
+                android:id="@+id/io_settings"
+                android:title="@string/io_settings_title"
+                android:fragment="com.android.settings.io.IOSettings"
+                android:icon="@drawable/ic_io_settings"
                 />
 
     </dashboard-category>
@@ -97,14 +89,6 @@
     <dashboard-category
             android:id="@+id/device_section"
             android:title="@string/header_category_device" >
-
-	<!-- Infinitive World -->
-        <dashboard-tile
-                android:id="@+id/io_settings"
-                android:title="@string/io_settings_title"
-                android:fragment="com.android.settings.io.IOSettings"
-                android:icon="@drawable/ic_io_settings"
-                />
 
         <!-- Home -->
         <dashboard-tile

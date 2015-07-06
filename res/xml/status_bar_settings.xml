@@ -70,10 +70,15 @@
         android:title="@string/status_bar_show_network_activity_title"
         android:defaultValue="false" />
 
-    <com.android.settings.slim.SystemSettingSwitchPreference
+    <com.android.settings.io.SystemSettingSwitchPreference
         android:key="double_tap_sleep_gesture"
         android:title="@string/double_tap_to_sleep_title"
         android:summary="@string/double_tap_to_sleep_summary"
         android:defaultValue="true" />
+
+    <PreferenceScreen
+        android:key="expanded_desktop"
+        android:title="@string/power_menu_expanded_desktop"
+        android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
 
 </PreferenceScreen>

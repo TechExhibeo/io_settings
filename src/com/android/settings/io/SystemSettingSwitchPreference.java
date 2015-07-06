@@ -1,6 +1,7 @@
 /*
  * Copyright (C) 2013 The CyanogenMod project
  * Copyright (C) 2015 The SlimRoms project
+ * Copyright (C) 2015 InfinitiveOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.slim;
+package com.android.settings.io;
 
 import android.content.Context;
 import android.preference.SwitchPreference;
