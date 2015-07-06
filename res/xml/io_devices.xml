@@ -88,8 +88,25 @@
                  android:summary="@string/device_sony_leo_summary"
                  android:selectable="false" 
                  android:title="@string/device_sony_leo" />
+
+             <Preference
+                 android:id="@+id/device_sony_togari"
+                 android:summary="@string/device_sony_togari_summary"
+                 android:selectable="false"
+                 android:title="@string/device_sony_togari" />
+
  
         </PreferenceCategory>
+
+        <PreferenceCategory
+             android:id="@+id/device_category_motorola"
+             android:title="@string/device_category_nexus_title" >
+
+             <Preference
+                 android:id="@+id/device_nexus5_hammerhead"
+                 android:summary="@string/device_nexus5_hammerhead_summary"
+                 android:selectable="false"
+                 android:title="@string/device_nexus5_hammerhead" />
 
         <PreferenceCategory
 	     android:id="@+id/device_category_motorola"

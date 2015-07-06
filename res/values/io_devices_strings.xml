@@ -68,7 +68,7 @@
     <string name="device_sony_sirius_summary">Sirius \nMaintainer - Rohan Purohit</string>
     <string name="device_sony_leo">Xperia Z3</string>
     <string name="device_sony_leo_summary">Leo \nMaintainer - Rohan Purohit</string>
-    <string name="device_sony_leo">Xperia ZL</string>
+    <string name="device_sony_togari">Xperia ZL</string>
     <string name="device_sony_togari_summary">Togari \nMaintainer - Saatvik Shukla</string>
 
     <!-- Nexus device Maintaniers -->
