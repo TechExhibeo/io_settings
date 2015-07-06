@@ -107,13 +107,13 @@
                 android:title="@string/firmware_version"
                 android:summary="@string/device_info_default"/>
 
-        <!-- Slim firmware version -->
-        <Preference android:key="slim_version"
+        <!-- InfinitiveOS Version -->
+        <Preference android:key="mod_version"
                 style="?android:preferenceInformationStyle"
-                android:title="@string/slim_version_title"
-                android:summary="@string/slim_version_default"/>
+                android:title="@string/mod_version"
+                android:summary="@string/mod_version_default" />
 
-        <!-- Build date -->
+        <!-- InfinitiveOS build date -->
         <Preference android:key="build_date"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/build_date"
