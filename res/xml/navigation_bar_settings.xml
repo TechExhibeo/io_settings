@@ -32,6 +32,8 @@
                 <extra android:name="fragment" android:value="com.android.settings.slim.fragments.NavbarButtonFragment" />
             </PreferenceScreen>
 
+        </PreferenceCategory>
+
         <PreferenceCategory
                 android:key="advanced_cat"
                 android:title="@string/advanced_settings">

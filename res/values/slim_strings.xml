@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2012-2014 SlimRoms Project
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -455,7 +454,7 @@
 
     <!-- Quick Settings: Tiles  -->
     <string name="qs_category_title">Quick Settings panel</string>
-    <string name="qs_tiles_title">QS Tiles</string>
+    <string name="title_qs_tiles">QS Tiles</string>
     <string name="qs_general_title">QS General</string>
 
     <string name="qs_brightness_slider_title">Show brightness slider</string>

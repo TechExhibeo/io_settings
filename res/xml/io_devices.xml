@@ -108,6 +108,9 @@
                  android:selectable="false"
                  android:title="@string/device_nexus5_hammerhead" />
 
+        </PreferenceCategory>
+
+
         <PreferenceCategory
 	     android:id="@+id/device_category_motorola"
              android:title="@string/device_category_motorola_title" >
@@ -124,11 +127,6 @@
                  android:selectable="false" 
                  android:title="@string/device_motorola_falcon" />
 
-             <Preference
-                 android:id="@+id/device_motorola_condor"
-                 android:summary="@string/device_motorola_condor_summary"
-                 android:selectable="false" 
-                 android:title="@string/device_motorola_condor" />
         </PreferenceCategory>
 
         <PreferenceCategory
@@ -159,14 +157,4 @@
                  android:title="@string/device_xiaomi_armani" />
         </PreferenceCategory>
         
-	<PreferenceCategory
-	     android:id="@+id/device_category_lg"
-             android:title="@string/device_category_lg_title" >
-
-             <Preference
-                 android:id="@+id/device_lg_g3"
-                 android:summary="@string/device_lg_g3_summary"
-                 android:selectable="false" 
-                 android:title="@string/device_lg_g3" />
-        </PreferenceCategory>
 </PreferenceScreen> 

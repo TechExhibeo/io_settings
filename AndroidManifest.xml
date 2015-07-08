@@ -2178,7 +2178,7 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
-                android:resource="@id/interface_settings" />
+                android:resource="@id/display_settings" />
         </activity>
 
         <receiver android:name=".bluetooth.BluetoothDiscoverableTimeoutReceiver">

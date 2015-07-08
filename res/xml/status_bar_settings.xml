@@ -76,9 +76,4 @@
         android:summary="@string/double_tap_to_sleep_summary"
         android:defaultValue="true" />
 
-    <PreferenceScreen
-        android:key="expanded_desktop"
-        android:title="@string/power_menu_expanded_desktop"
-        android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
-
 </PreferenceScreen>
