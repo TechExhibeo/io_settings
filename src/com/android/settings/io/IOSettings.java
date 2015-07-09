@@ -24,6 +24,8 @@ import android.view.ViewGroup;
 import com.android.settings.slim.StatusBarClockStyle;
 import com.android.settings.slim.StatusBar;
 import com.android.settings.io.NavigationBarSettings;
+import com.android.settings.slim.NavbarSettings;
+import com.android.settings.slim.RecentPanel;
 import com.android.settings.slim.QsSettings;
 import com.android.settings.io.PowerMenuActions;
 import com.android.settings.io.About;
@@ -82,10 +84,10 @@ public class IOSettings extends SettingsPreferenceFragment {
 
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
-            frags[0] = new StatusBarSettings();
+            frags[0] = new StatusBar();
             frags[1] = new NavigationBarSettings();
             frags[2] = new QsSettings();
-            frags[3] = new RecentsPanel();
+            frags[3] = new RecentPanel();
             frags[4] = new PowerMenuActions();
             frags[5] = new About();
         }

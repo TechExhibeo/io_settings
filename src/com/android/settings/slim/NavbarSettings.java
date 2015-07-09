@@ -88,7 +88,7 @@ public class NavbarSettings extends SettingsPreferenceFragment implements
         super.onCreate(savedInstanceState);
 
         // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.navbar_settings);
+        addPreferencesFromResource(R.xml.navigation_bar_settings);
 
         PreferenceScreen prefs = getPreferenceScreen();
 
