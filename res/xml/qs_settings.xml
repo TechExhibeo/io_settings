@@ -37,7 +37,7 @@
             android:title="@string/qs_four_columns_title"
             android:defaultValue="false" />
 
-        <com.android.settings.slim.SystemSettingSwitchPreference
+        <com.android.settings.io.SystemSettingSwitchPreference
             android:key="quick_settings_vibrate"
             android:title="@string/quick_settings_vibrate_title"
             android:summary="@string/quick_settings_vibrate_summary"
