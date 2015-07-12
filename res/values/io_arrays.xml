@@ -98,6 +98,7 @@
         <item>0</item>
         <item>1</item>
         <item>2</item>
+    </string-array>
 
     <!-- clear all recents button location -->
     <string-array name="recents_clear_all_location_entries">
