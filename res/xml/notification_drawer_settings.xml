@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2015 The InfinitiveOS Project
+     Copyright (C) 2015 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,10 +14,14 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/notification_drawer_title">
 
-    <!-- Default value for battery_light_enabled preference -->
-    <bool name="def_battery_light_enabled">true</bool>
-    <!-- Default value for battery light pulse -->
-    <bool name="def_battery_light_pulse">true</bool>
-</resources>
+    <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
+        android:key="qs_show_brightness_slider"
+        android:title="@string/qs_brightness_slider_title_eos"
+        android:summary="@string/qs_brightness_slider_summary"
+        android:defaultValue="true" />
+</PreferenceScreen>
+
+

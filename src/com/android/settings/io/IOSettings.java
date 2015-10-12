@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 
 import com.android.settings.io.StatusBarSettings;
 import com.android.settings.io.LockScreenSettings;
+import com.android.settings.cyanogenmod.NotificationDrawerSettings;
 import com.android.settings.io.PagerSlidingTabStrip;
 import com.android.settings.R;
 import com.android.settings.Utils;
@@ -81,6 +82,7 @@ public class IOSettings extends SettingsPreferenceFragment {
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
 	    frags[0] = new StatusBarSettings();
+	    frags[1] = new NotificationDrawerSettings();
           
         }
 
@@ -103,7 +105,8 @@ public class IOSettings extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
-		    getString(R.string.status_bar_title)};
+		    getString(R.string.status_bar_title),
+		    getString(R.string.notification_drawer_title)};
         return titleString;
     }
 
