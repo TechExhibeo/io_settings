@@ -118,6 +118,6 @@ public class IOSettings extends SettingsPreferenceFragment {
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsLogger.APPLICATION;
+        return MetricsLogger.IO_SETTINGS;
     }
 }
