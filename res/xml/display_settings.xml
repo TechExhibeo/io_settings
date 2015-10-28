@@ -40,7 +40,12 @@
                 android:summary="@string/network_name_displayed_summary"
                 android:persistent="false" />
 
-        <!-- Hide night mode for now
+        <Preference
+            android:key="expanded_desktop"
+            android:fragment="com.android.settings.custom.ExpandedDesktop"
+            android:title="@string/expanded_desktop_category" />
+
+	<!-- Hide night mode for now
         <ListPreference
             android:key="night_mode"
             android:title="@string/night_mode_title"
