@@ -80,6 +80,7 @@ import com.android.settings.applications.ProcessStatsUi;
 import com.android.settings.applications.UsageAccessDetails;
 import com.android.settings.applications.WriteSettingsDetails;
 import com.android.settings.bluetooth.BluetoothSettings;
+import com.android.settings.custom.BatteryBarSettings;
 import com.android.settings.dashboard.DashboardCategory;
 import com.android.settings.dashboard.DashboardSummary;
 import com.android.settings.dashboard.DashboardTile;
@@ -364,6 +365,7 @@ public class SettingsActivity extends Activity
             NavbarSettings.class.getName(),
             FlingSettings.class.getName(),
             SmartBarSettings.class.getName()
+            BatteryBarSettings.class.getName(),
     };
 
 
