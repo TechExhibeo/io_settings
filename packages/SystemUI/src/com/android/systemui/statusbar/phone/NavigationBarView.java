@@ -28,6 +28,7 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.database.ContentObserver;
+import android.graphics.Bitmap;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
@@ -48,6 +49,7 @@ import android.view.ViewGroup;
 import android.view.ViewRootImpl;
 import android.view.WindowManager;
 import android.view.GestureDetector;
+import android.view.animation.Animation;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -369,35 +371,6 @@ public class NavigationBarView extends BaseNavigationBar {
         }
     }
 
-    public void setLayoutTransitionsEnabled(boolean enabled) {
-        super.setLayoutTransitionsEnabled(enabled);
-        updateLayoutTransitionsEnabled();
-    }
-
-    public void setWakeAndUnlocking(boolean wakeAndUnlocking) {
-        super.setWakeAndUnlocking(wakeAndUnlocking);
-        updateLayoutTransitionsEnabled();
-    }
-
-    private void updateLayoutTransitionsEnabled() {
-        boolean enabled = !mWakeAndUnlocking && mLayoutTransitionsEnabled;
-        ViewGroup navButtons = (ViewGroup) mCurrentView.findViewById(R.id.nav_buttons);
-        LayoutTransition lt = navButtons.getLayoutTransition();
-        if (lt != null) {
-            if (enabled) {
-                lt.enableTransitionType(LayoutTransition.APPEARING);
-                lt.enableTransitionType(LayoutTransition.DISAPPEARING);
-                lt.enableTransitionType(LayoutTransition.CHANGE_APPEARING);
-                lt.enableTransitionType(LayoutTransition.CHANGE_DISAPPEARING);
-            } else {
-                lt.disableTransitionType(LayoutTransition.APPEARING);
-                lt.disableTransitionType(LayoutTransition.DISAPPEARING);
-                lt.disableTransitionType(LayoutTransition.CHANGE_APPEARING);
-                lt.disableTransitionType(LayoutTransition.CHANGE_DISAPPEARING);
-            }
-        }
-    }
-
     public void setMenuVisibility(final boolean show) {
         setMenuVisibility(show, false);
     }
@@ -566,13 +539,12 @@ public class NavigationBarView extends BaseNavigationBar {
         }
         pw.println();
     }
-
     @Override
-    protected void onDispose() {
-//        if (mSettingsObserver != null) {
-//            mSettingsObserver.unobserve();
-//        }
-    }
+	    protected void onDispose() {
+	//        if (mSettingsObserver != null) {
+	//            mSettingsObserver.unobserve();
+	//        }
+	}
 
     private class SettingsObserver extends UserContentObserver {
 
@@ -602,6 +574,17 @@ public class NavigationBarView extends BaseNavigationBar {
         protected void update() {
             mDoubleTapToSleep = Settings.System.getIntForUser(mContext.getContentResolver(),
                     Settings.System.DOUBLE_TAP_SLEEP_NAVBAR, 0, UserHandle.USER_CURRENT) != 0;
-        }
+	}
+
+    @Override
+    public boolean onStartPulse(Animation animatePulseIn) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public void onStopPulse(Animation animatePulseOut) {
+        // TODO Auto-generated method stub
+
     }
 }
