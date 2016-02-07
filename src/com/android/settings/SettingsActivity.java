@@ -89,7 +89,9 @@ import com.android.settings.deviceinfo.PrivateVolumeForget;
 import com.android.settings.deviceinfo.PrivateVolumeSettings;
 import com.android.settings.deviceinfo.PublicVolumeSettings;
 import com.android.settings.deviceinfo.StorageSettings;
+import com.android.settings.dui.nav.FlingSettings;
 import com.android.settings.dui.nav.NavbarSettings;
+import com.android.settings.dui.nav.SmartBarSettings;
 import com.android.settings.fuelgauge.BatterySaverSettings;
 import com.android.settings.fuelgauge.PowerUsageDetail;
 import com.android.settings.fuelgauge.PowerUsageSummary;
@@ -359,7 +361,9 @@ public class SettingsActivity extends Activity
             ProcessStatsSummary.class.getName(),
             DrawOverlayDetails.class.getName(),
             WriteSettingsDetails.class.getName(),
-            NavbarSettings.class.getName()
+            NavbarSettings.class.getName(),
+            FlingSettings.class.getName(),
+            SmartBarSettings.class.getName()
     };
 
 
