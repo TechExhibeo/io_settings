@@ -38,7 +38,8 @@ public class BrightnessMirrorController {
     private final View mPanelHolder;
     private final int[] mInt2Cache = new int[2];
 
-    public BrightnessMirrorController(StatusBarWindowView statusBarWindow) {
+    public BrightnessMirrorController(Context context, View statusBarWindow) {
+        mContext = context;
         mScrimBehind = (ScrimView) statusBarWindow.findViewById(R.id.scrim_behind);
         mBrightnessMirror = statusBarWindow.findViewById(R.id.brightness_mirror);
         mPanelHolder = statusBarWindow.findViewById(R.id.panel_holder);
