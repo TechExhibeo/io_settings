@@ -3396,6 +3396,15 @@ public final class Settings {
                 }
             }
         };
+        
+        /**
+         *  Enable statusbar double tap gesture on to put device to sleep
+         * @hide
+         */
+        public static final String DOUBLE_TAP_SLEEP_GESTURE = "double_tap_sleep_gesture";
+
+        /** @hide */
+        public static final Validator DOUBLE_TAP_SLEEP_GESTURE_VALIDATOR = sBooleanValidator;
 
         /**
          * IMPORTANT: If you add a new public settings you also have to add it to
