@@ -39,11 +39,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.internal.logging.MetricsLogger;
+import com.android.internal.telephony.CarrierAppUtils;
 import com.android.systemui.FontSizeUtils;
 import com.android.systemui.R;
 import com.android.systemui.cm.UserContentObserver;
 import com.android.systemui.qs.QSTile.DetailAdapter;
 import com.android.systemui.settings.BrightnessController;
+import com.android.systemui.settings.SimSwitchController;
 import com.android.systemui.settings.ToggleSlider;
 import com.android.systemui.statusbar.phone.QSTileHost;
 import com.android.systemui.statusbar.policy.BrightnessMirrorController;
@@ -63,6 +65,7 @@ public class QSPanel extends ViewGroup {
     private final TextView mDetailSettingsButton;
     private final TextView mDetailDoneButton;
     protected final View mBrightnessView;
+    protected View mSimSwitcherView = null;
     private final QSDetailClipper mClipper;
     private final H mHandler = new H();
 
@@ -87,10 +90,12 @@ public class QSPanel extends ViewGroup {
     private Record mDetailRecord;
     private Callback mCallback;
     private BrightnessController mBrightnessController;
+    private SimSwitchController mSimSwitchController;
     private QSTileHost mHost;
 
     private QSFooter mFooter;
     private boolean mGridContentVisible = true;
+    CarrierAppUtils.CARRIER carrier = CarrierAppUtils.getCarrierId();
 
     protected Vibrator mVibrator;
 
@@ -113,6 +118,12 @@ public class QSPanel extends ViewGroup {
         updateDetailText();
         mDetail.setVisibility(GONE);
         mDetail.setClickable(true);
+        if (isVoicePrefEnabled()) {
+            mSimSwitcherView = LayoutInflater.from(context).inflate(
+                    R.layout.sim_switcher, this, false);
+            addView(mSimSwitcherView);
+            mSimSwitchController = new SimSwitchController(getContext(), mSimSwitcherView, this);
+        }
         mBrightnessView = LayoutInflater.from(context).inflate(
                 R.layout.quick_settings_brightness_dialog, this, false);
         mFooter = new QSFooter(this, context);
@@ -524,8 +535,15 @@ public class QSPanel extends ViewGroup {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         final int width = MeasureSpec.getSize(widthMeasureSpec);
+
+        int simswitcherHeight = 0;
+        if (isVoicePrefEnabled()) {
+            mSimSwitcherView.measure(exactly(width), MeasureSpec.UNSPECIFIED);
+            simswitcherHeight = mSimSwitcherView.getMeasuredHeight() + mBrightnessPaddingTop;
+        }
         mBrightnessView.measure(exactly(width), MeasureSpec.UNSPECIFIED);
-        final int brightnessHeight = mBrightnessView.getMeasuredHeight() + mBrightnessPaddingTop;
+        final int brightnessHeight =
+                mBrightnessView.getMeasuredHeight() + mBrightnessPaddingTop + simswitcherHeight;
         mFooter.getView().measure(exactly(width), MeasureSpec.UNSPECIFIED);
         int r = -1;
         int c = -1;
@@ -574,9 +592,18 @@ public class QSPanel extends ViewGroup {
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         final int w = getWidth();
-        mBrightnessView.layout(0, mBrightnessPaddingTop,
+        int padding = mBrightnessPaddingTop;
+        if (isVoicePrefEnabled()) {
+            if (mSimSwitcherView.getVisibility() != View.GONE) {
+                padding = mBrightnessPaddingTop*2 + mSimSwitcherView.getMeasuredHeight();
+            }
+            mSimSwitcherView.layout(0, mBrightnessPaddingTop,
+                    mSimSwitcherView.getMeasuredWidth(),
+                    mBrightnessPaddingTop + mSimSwitcherView.getMeasuredHeight());
+        }
+        mBrightnessView.layout(0, padding,
                 mBrightnessView.getMeasuredWidth(),
-                mBrightnessPaddingTop + mBrightnessView.getMeasuredHeight());
+                padding + mBrightnessView.getMeasuredHeight());
         boolean isRtl = getLayoutDirection() == LAYOUT_DIRECTION_RTL;
         for (TileRecord record : mRecords) {
             if (record.tileView.getVisibility() == GONE) continue;
@@ -605,10 +632,17 @@ public class QSPanel extends ViewGroup {
     }
 
     private int getRowTop(int row) {
-        if (row <= 0) return mBrightnessView.getMeasuredHeight() + mBrightnessPaddingTop;
-        return mBrightnessView.getMeasuredHeight() + mBrightnessPaddingTop
-                + (mUseMainTiles ? mLargeCellHeight - mDualTileUnderlap : mCellHeight)
-                + (row - 1) * mCellHeight;
+        if (!isVoicePrefEnabled() || mSimSwitcherView.getVisibility() == View.GONE) {
+            if (row <= 0) return mBrightnessView.getMeasuredHeight() + mBrightnessPaddingTop;
+            return mBrightnessView.getMeasuredHeight() + mBrightnessPaddingTop
+                    + mLargeCellHeight - mDualTileUnderlap + (row - 1) * mCellHeight;
+        } else {
+            if (row <= 0) return mSimSwitcherView.getMeasuredHeight() + mBrightnessPaddingTop*2
+                    + mBrightnessView.getMeasuredHeight();
+            return mBrightnessView.getMeasuredHeight() + mBrightnessPaddingTop*2
+                    + mBrightnessView.getMeasuredHeight()
+                    + mLargeCellHeight - mDualTileUnderlap + (row - 1) * mCellHeight;
+        }
     }
 
     private int getColumnCount(int row) {
@@ -761,5 +795,12 @@ public class QSPanel extends ViewGroup {
             mContext.getContentResolver(), Settings.Secure.QS_USE_MAIN_TILES,
                 1, UserHandle.USER_CURRENT) == 1;
         }
+    public boolean isVoicePrefEnabled() {
+        boolean status = false;
+
+        if (carrier != null && (CarrierAppUtils.CARRIER.TELEPHONY_CARRIER_ONE == carrier)) {
+            status = true;
+        }
+        return status;
     }
 }
